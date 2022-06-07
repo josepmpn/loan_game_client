@@ -19,9 +19,8 @@
             <mat-form-field>
                 <mat-label>Fecha del prestamo</mat-label>
                 <mat-form-field appearance="fill">
-                    <mat-label>Fecha</mat-label>
                     <input matInput [matDatepicker]="picker" [(ngModel)]="filterDate" name="date">
-                    <mat-hint>YYYY-MM-DD</mat-hint>
+                    <mat-hint>DD-MM-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
@@ -52,12 +51,12 @@
 
         <ng-container matColumnDef="start">
             <mat-header-cell *matHeaderCellDef> Inicio  </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.start}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.start | date:'dd/MM/yyyy'}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="end">
             <mat-header-cell *matHeaderCellDef> Fin  </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.end}} </mat-cell>
+            <mat-cell *matCellDef="let element"> {{element.end | date:'dd/MM/yyyy'}} </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="action">

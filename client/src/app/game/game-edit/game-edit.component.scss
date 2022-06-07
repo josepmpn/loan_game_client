@@ -1,6 +1,5 @@
 .container {
-    display: flex;
-    width: 400px;
+    width: 250px;
 
     mat-card {
         width: 100%;
@@ -28,6 +27,13 @@
                 div {
                     height: 15px;
                 }                
+            }
+            .buttons {
+                text-align: right;
+          
+                button {
+                    margin-left: 10px;
+                }
             }
         }
     }

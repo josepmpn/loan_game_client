@@ -11,6 +11,12 @@ import { GameModule } from './game/game.module';
 import { CustomerModule } from './customer/customer.module';
 import { LoanModule } from './loan/loan.module';
 import {  LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+
+import localeEsES from '@angular/common/locales/es';
+registerLocaleData(localeEsES, 'es');
+
+
 
 
 

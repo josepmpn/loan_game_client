@@ -25,7 +25,7 @@ export class LoanService {
 
   // Recupera todos los prestamos
   getAllLoans(pageable: Pageable): Observable<LoanPage> {
-    return this.http.post<LoanPage>('http://localhost:8080/loan', {pageable:pageable});
+    return this.getLoans(null, null, null, pageable.pageNumber, pageable.pageSize);
   
   }
 
