@@ -1,11 +1,11 @@
 .container {
-    display: flex;
-    width: 450px;
+    display: box;
+    width: 250px;
 
     mat-card {
         width: 100%;
         margin: 10px;
-        display: flex;
+        display: box;
 
         .detail {
             .title {
